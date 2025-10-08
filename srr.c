@@ -32,7 +32,9 @@ void main()
   
   int currenttime=0;
   int completed=0;
+  
   int size=0;
+  
   int totaltat=0;
   int totalwt=0;
   

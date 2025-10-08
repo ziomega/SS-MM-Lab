@@ -31,6 +31,7 @@ void main()
     p[i].done=false;
     
   }
+  //sort based on arrival time and burst time 
   for(int i=0;i<n;i++)
   {
     for(int j=i+1;j<n;j++)
