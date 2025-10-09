@@ -9,11 +9,11 @@ struct file
   int no;
 };
 
-void fconfig( struct file* file1, int start, int count)
+void fconfig(struct file* file1, int start, int count)
 { 
-  strcpy((*file1).filename,"file.txt");
-  (*file1).start= start;
-  (*file1).no= count;
+  strcpy(file1->filename,"file.txt");
+  file1->start= start;
+  file1->no= count;
 }
 
 void main()
