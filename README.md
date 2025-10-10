@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧠 SS-MM Lab
 
 This repository contains all experiments and programs for the **System Software and Microprocessor Lab (SS-MM)** 
@@ -57,5 +58,3 @@ The repo is organized into three major sections:
 - **Languages:** C
 - **Editors:** Gnome Text Editor
 - **OS:** Linux 
-
-
