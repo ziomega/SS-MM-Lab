@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🧠 SS-MM Lab
 
 This repository contains all experiments and programs for the **System Software and Microprocessor Lab (SS-MM)** 
