@@ -48,8 +48,6 @@ void p1(char label[10], char opcode[10], char operand[10], char code[10], char m
   else
     locctr=0;
     
-    
-    
   while(strcmp(opcode,"END")!=0)
   {
     fprintf(f4,"%d\t%s\t%s\t%s\n", locctr, label, opcode, operand);
@@ -59,8 +57,6 @@ void p1(char label[10], char opcode[10], char operand[10], char code[10], char m
     {
       fprintf(f3,"%s\t%d\n", label, locctr);
     }
-    
-    
     
     rewind(f2);
     int found=0;
@@ -75,7 +71,6 @@ void p1(char label[10], char opcode[10], char operand[10], char code[10], char m
       }
     }
     rewind(f2);
-
     
     if(!found)
     {

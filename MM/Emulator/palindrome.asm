@@ -58,6 +58,6 @@ code SEGMENT
 		MOV AH, 4CH
 		INT 21H
 	
-END START 
+END start 
 code ENDS
 ENDS

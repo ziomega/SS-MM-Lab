@@ -89,7 +89,7 @@ void cscan(int req[], int n, int head, int size, int direction)
     
     printf("%d->", size-1);
     totalseek+=abs(head-(size-1));
-    head=0;
+    head=size-1;
     
     for(int i=r-1;i>=0;i--)
     {
