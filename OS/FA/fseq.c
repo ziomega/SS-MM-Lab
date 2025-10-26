@@ -15,7 +15,7 @@ int main()
   
     struct file files[50];
     int n;
-    int disk[100] = {-1};
+    int disk[100] = {0};
     int totalBlocks;
 
     printf("Enter total number of disk blocks: ");
@@ -37,7 +37,7 @@ int main()
 
         int flag = 0; 
 
-        for (j = files[i].start; j < (files[i].start + files[i].no); j++)
+        for (int j = files[i].start; j < (files[i].start + files[i].no); j++)
         {
             if (j >= totalBlocks || disk[j] == 1)
             {
