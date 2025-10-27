@@ -1,25 +1,30 @@
-data SEGMENT 
-	MSG1 DB 10,13, 'Enter the string:$'
-	MSG2 DB 10,13, 'Is a Palindrome.$'
-	MSG3 DB 10,13, 'Not a Palindrome.$'
+data SEGMENT
+
+	MSG1 DB 10,13, 'Enter String:$'
+	MSG2 DB 10,13, 'Is Palindrome.$'
+	MSG3 DB 10,13, 'Not Palindrome.$'
 	
 	STR DB 50 DUP(0)
+	
 data ENDS
 
+
 code SEGMENT 
-	ASSUME CS: code, DS: data
+
+	ASSUME CS:code, DS: data
 	
 	START:
-		MOV AX, DATA
-		MOV DS, AX
+		MOV AX,DATA
+		MOV DS,AX
 		
-		LEA DX, MSG1
-		MOV AH, 09H
+		LEA DX,MSG1
+		MOV AH,09H
 		INT 21H
 		
 		LEA SI,STR
 		LEA DI,STR
-		MOV AH, 01H
+		
+		MOV AH,01H
 		
 	NEXT:
 		INT 21H
@@ -30,12 +35,14 @@ code SEGMENT
 		JMP NEXT
 		
 	TERMINATE:
+		
 		MOV AL,'$'
 		MOV [DI],AL
 		DEC DI
 		
-	CHECK_LOOP
-		MOV AL, [SI]
+	CHECK_LOOP:
+	
+		MOV AL,[SI]
 		CMP AL,[DI]
 		JNE NOTPALINDROME
 		INC SI
@@ -44,20 +51,22 @@ code SEGMENT
 		JLE CHECK_LOOP
 		
 	PALINDROME:
-		LEA DX, MSG2
-		MOV AH, 09H
+		
+		LEA DX,MSG2
+		MOV AH,09H
 		INT 21H
 		JMP EXIT
 		
 	NOTPALINDROME:
-		LEA DX, MSG3
-		MOV AH, 09H
+		
+		LEA DX,MSG3
+		MOV AH,09H
+		INT 21H	
+	
+	EXIT:
+		MOV AH,4CH
 		INT 21H
 		
-	EXIT:
-		MOV AH, 4CH
-		INT 21H
-	
-END start 
+END START
 code ENDS
 ENDS
