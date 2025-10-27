@@ -23,12 +23,10 @@ int main() {
 
     while (strcmp(opcode, "END") != 0) {
 
-        // 1️⃣ Store macro definition
         if (strcmp(opcode, "MACRO") == 0) {
-            fprintf(namtab, "%s\n", label);          // Save macro name
-            fprintf(deftab, "%s %s\n", label, operand); // Save header
+            fprintf(namtab, "%s\n", label); 
+            fprintf(deftab, "%s %s\n", label, operand);
 
-            // Store formal parameters (&FROM,&TO)
             argCount = 0;
             char *tok = strtok(operand, ",");
             while (tok) {
@@ -36,7 +34,6 @@ int main() {
                 tok = strtok(NULL, ",");
             }
 
-            // Copy body till MEND
             fscanf(input, "%s%s%s", label, opcode, operand);
             while (strcmp(opcode, "MEND") != 0) {
                 fprintf(deftab, "%s %s\n", opcode, operand);
@@ -45,7 +42,6 @@ int main() {
             fprintf(deftab, "MEND -\n");
         }
 
-        // 2️⃣ If macro call found
         else {
             rewind(namtab);
             int found = 0;
@@ -59,7 +55,7 @@ int main() {
             }
 
             if (found) {
-                // Read actual arguments
+         
                 argCount = 0;
                 char *tok = strtok(operand, ",");
                 while (tok) {
@@ -67,16 +63,16 @@ int main() {
                     tok = strtok(NULL, ",");
                 }
 
-                // Find macro body in DEFTAB
+    
                 rewind(deftab);
                 while (fscanf(deftab, "%s%s", defop, defopnd) != EOF) {
                     if (strcmp(defop, opcode) == 0) break;
                 }
 
-                // Expand body
+     
                 while (fscanf(deftab, "%s%s", defop, defopnd) != EOF && strcmp(defop, "MEND") != 0) {
                     if (defopnd[0] == '&') {
-                        // Replace &NAME by argument
+ 
                         for (i = 0; i < argCount; i++) {
                             if (strcmp(defopnd, formal[i]) == 0) {
                                 fprintf(output, "-\t%s\t%s\n", defop, argtab[i]);
@@ -88,7 +84,7 @@ int main() {
                     }
                 }
             } else {
-                // Normal line
+
                 fprintf(output, "%s\t%s\t%s\n", label, opcode, operand);
             }
         }
