@@ -40,10 +40,10 @@ The repo is organized into three major sections:
 - [Sequential Allocation](OS/FA/fseq.c)
 
 #### 🔄 Page Replacement
-- [First Come First Serve (FCFS)](OS/PG/pgfcfs.c)
-- [Least Frequently Used (LFU)](OS/PG/pglfu.c)
-- [Least Recently Used (LRU)](OS/PG/pglru.c)
-- [Optimal Page Replacement](OS/PG/pgoptimal.c)
+- [First Come First Serve (FCFS)](OS/PR/pgfcfs.c)
+- [Least Frequently Used (LFU)](OS/PR/pglfu.c)
+- [Least Recently Used (LRU)](OS/PR/pglru.c)
+- [Optimal Page Replacement](OS/PR/pgoptimal.c)
 
 #### 🧠 Memory Allocation
 - [Best Fit](OS/MA/mbestfit.c)
@@ -51,10 +51,10 @@ The repo is organized into three major sections:
 - [Worst Fit](OS/MA/mworstfit.c)
 
 #### 🤝 Process Synchronization
-- [Banker's Algorithm (Deadlock Avoidance)](OS/PS/bankers.c)
-- [Reader-Writer Problem (Reader's Code)](OS/PS/reader.c)
-- [Semaphore Implementation](OS/PS/semaphore.c)
-- [Reader-Writer Problem (Writer's Code)](OS/PS/writer.c)
+- [Banker's Algorithm (Deadlock Avoidance)](OS/Other/bankers.c)
+- [Reader-Writer Problem (Reader's Code)](OS/Other/reader.c)
+- [Semaphore Implementation](OS/Other/semaphore.c)
+- [Reader-Writer Problem (Writer's Code)](OS/Other/writer.c)
 
 ---
 
