@@ -17,7 +17,7 @@ The repo is organized into three major sections:
 - [Pass 2 of 2 Pass Assembler](SS/2%20Pass%20Assembler/pass2.c)
 - [Absolute Loader](SS/aloader.c)
 - [Relocating Loader](SS/relocating.c)
-- [One Pass Macro Processor](SS/1passmacro.c)
+- [One Pass Macro Processor](SS/macro.c)
   
 ---
 
