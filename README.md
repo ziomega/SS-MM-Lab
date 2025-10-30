@@ -11,16 +11,6 @@ The repo is organized into three major sections:
 
 ## 📂 File Index
 
-### 🧮 System Software (SS)
-
-- [Pass 1 of 2 Pass Assembler](SS/2%20Pass%20Assembler/pass1.c)
-- [Pass 2 of 2 Pass Assembler](SS/2%20Pass%20Assembler/pass2.c)
-- [Absolute Loader](SS/aloader.c)
-- [Relocating Loader](SS/relocating.c)
-- [One Pass Macro Processor](SS/macro.c)
-  
----
-
 ### ⚙️ Operating System (OS)
 
 #### ⏱️ Scheduling Algorithms
@@ -56,6 +46,16 @@ The repo is organized into three major sections:
 - [Semaphore Implementation](OS/Other/semaphore.c)
 - [Reader-Writer Problem (Writer's Code)](OS/Other/writer.c)
 
+---
+
+### 🧮 System Software (SS)
+
+- [Pass 1 of 2 Pass Assembler](SS/2%20Pass%20Assembler/pass1.c)
+- [Pass 2 of 2 Pass Assembler](SS/2%20Pass%20Assembler/pass2.c)
+- [Absolute Loader](SS/aloader.c)
+- [Relocating Loader](SS/relocating.c)
+- [One Pass Macro Processor](SS/macro.c)
+  
 ---
 
 ### 💻 Microprocessor & Microcontroller (MM)
